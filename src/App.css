@@ -2,14 +2,20 @@
   text-align: center;
   display: flex;
   justify-content: space-evenly;
-  background: linear-gradient(
+  /* background: linear-gradient(
       217deg,
       rgba(255, 0, 0, 0.8),
       rgba(255, 0, 0, 0) 70.71%
     ),
     linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%); */
   min-height: 100vh;
+  background-image: url("https://picsum.photos/1600/900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
 }
 
 .form {
@@ -45,4 +51,11 @@
 
 .design {
   font-size: 2rem;
+}
+
+.contact-header {
+  font-family: Girassol;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
 }

@@ -38,14 +38,7 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
             <span className="design header">design</span>
           </div>
         </div>
-        <Header
-          as="h2"
-          textAlign="center"
-          style={{ fontFamily: "Girassol" }}
-          className="add-contact-header"
-        >
-          Add Contact
-        </Header>
+        <h2 className="contact-header">Add Contact</h2>
         <Form size="large" onSubmit={handleFormSubmit}>
           <Segment stacked>
             <Form.Input
