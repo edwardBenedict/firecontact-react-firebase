@@ -16,8 +16,9 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
     });
   };
 
-  const handleOptionChange = (e) => {
-    setInfo({ ...info, gender: e.target.textContent });
+  const handleOptionChange = (e, result) => {
+    const { name, value } = result;
+    setInfo({ ...info, [name]: value.toUpperCase() });
   };
 
   return (
@@ -66,6 +67,7 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
               options={options}
               onChange={handleOptionChange}
               placeholder="Gender"
+              name="gender"
               fluid
               selection
               value={info.gender.toLowerCase()}
