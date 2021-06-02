@@ -2,6 +2,10 @@
 
 FireContact is an app about phone contacts using firebase realtime database.
 
+## Project Gif
+
+![FireContact App](firecontact.gif)
+
 ## .env file content
 
 REACT_APP_API_KEY=""
