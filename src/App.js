@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import Form from "./components/form/Form";
 import Contacts from "./components/table/Contacts";
-import firebase from "./utils/firebase";
 import { ToastContainer } from "react-toastify";
-import { succesNotify } from "./utils/CustomToastify";
+import { updateInfo, addInfo } from "./utils/functions";
 
 function App() {
   const [info, setInfo] = useState({
@@ -16,13 +15,9 @@ function App() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (info.id) {
-      const contactRef = firebase.database().ref("contact").child(info.id);
-      contactRef.update(info);
-      succesNotify("Updated Successfully!");
+      updateInfo(info);
     } else {
-      const inpRef = firebase.database().ref("contact");
-      inpRef.push(info);
-      succesNotify("Added Successfully!");
+      addInfo(info);
     }
     setInfo({ username: "", phoneNumber: "", gender: "No Info!" });
   };

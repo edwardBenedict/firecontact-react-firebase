@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import firebase from "../../utils/firebase";
 import { Table } from "semantic-ui-react";
 import { Icon } from "semantic-ui-react";
+import { deleteHandler } from "../../utils/functions";
 
 const Contacts = ({ editHandler }) => {
   const [contactList, setContactList] = useState();
@@ -22,11 +23,6 @@ const Contacts = ({ editHandler }) => {
       setIsLoading(false);
     });
   }, []);
-
-  const deleteHandler = (id) => {
-    const contactRef = firebase.database().ref("contact").child(id);
-    contactRef.remove();
-  };
 
   return (
     <div>
