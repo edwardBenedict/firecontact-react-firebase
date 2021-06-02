@@ -13,11 +13,12 @@ const Contacts = ({ editHandler }) => {
     contactRef.on("value", (snapshot) => {
       //   console.log(snapshot.val());
       const contacts = snapshot.val();
-      const contactL = [];
+      // console.log({ contacts });
+      const contactArray = [];
       for (let id in contacts) {
-        contactL.push({ id, ...contacts[id] });
+        contactArray.push({ id, ...contacts[id] });
       }
-      setContactList(contactL);
+      setContactList(contactArray);
       setIsLoading(false);
     });
   }, []);
@@ -28,13 +29,7 @@ const Contacts = ({ editHandler }) => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-    >
+    <div>
       <h2 className="contact-header">Contacts</h2>
       <Table size={"large"} style={{ minWidth: "500px" }}>
         <Table.Header>

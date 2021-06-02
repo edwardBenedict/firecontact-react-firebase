@@ -1,11 +1,6 @@
 import React from "react";
 import { Button, Form, Grid, Segment } from "semantic-ui-react";
-
-const options = [
-  { key: "m", text: "Male", value: "male" },
-  { key: "f", text: "Female", value: "female" },
-  { key: "o", text: "Other", value: "other" },
-];
+import { options } from "../../utils/constants";
 
 const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
   const handleInputChange = (e) => {
@@ -28,11 +23,9 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
           <div className="ui segment brand">
             <a
               href="https://github.com/edwardBenedict"
+              className="design"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                fontSize: "2rem",
-              }}
             >
               <code>{"<ed8en/> "}</code>
             </a>
