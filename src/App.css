@@ -52,3 +52,7 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.nothing-found {
+  color: red;
+}

@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import firebase from "../../utils/firebase";
 import { Table } from "semantic-ui-react";
 import { Icon } from "semantic-ui-react";
 import { deleteHandler, useFetch } from "../../utils/functions";
@@ -30,7 +28,7 @@ const Contacts = ({ editHandler }) => {
           ) : contactList?.length === 0 ? (
             <Table.Row>
               <Table.Cell colSpan={5} textAlign="center">
-                <p>Nothing Found</p>
+                <p className="nothing-found">Nothing Found</p>
               </Table.Cell>
             </Table.Row>
           ) : (

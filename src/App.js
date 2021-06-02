@@ -5,12 +5,10 @@ import Contacts from "./components/table/Contacts";
 import { ToastContainer } from "react-toastify";
 import { updateInfo, addInfo } from "./utils/functions";
 
+const initialValues = { username: "", phoneNumber: "", gender: "NO INFO!" };
+
 function App() {
-  const [info, setInfo] = useState({
-    username: "",
-    phoneNumber: "",
-    gender: "No Info!",
-  });
+  const [info, setInfo] = useState(initialValues);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +17,7 @@ function App() {
     } else {
       addInfo(info);
     }
-    setInfo({ username: "", phoneNumber: "", gender: "No Info!" });
+    setInfo(initialValues);
   };
 
   const editHandler = (id, username, phoneNumber, gender) => {
