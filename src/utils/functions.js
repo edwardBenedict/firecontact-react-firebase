@@ -7,21 +7,6 @@ export const deleteHandler = (id) => {
   succesNotify("Deleted Successfully!");
 };
 
-// export const getData = () => {
-//   const contactRef = firebase.database().ref("contact");
-//   contactRef.on("value", (snapshot) => {
-//     //   console.log(snapshot.val());
-//     const contacts = snapshot.val();
-//     // console.log({ contacts });
-//     const contactArray = [];
-//     for (let id in contacts) {
-//       contactArray.push({ id, ...contacts[id] });
-//     }
-//     console.log({ contactArray });
-//     return contactArray;
-//   });
-// };
-
 export const updateInfo = (info) => {
   const contactRef = firebase.database().ref("contact").child(info.id);
   contactRef.update(info);
