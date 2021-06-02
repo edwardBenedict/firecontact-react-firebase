@@ -2,27 +2,10 @@ import React, { useEffect, useState } from "react";
 import firebase from "../../utils/firebase";
 import { Table } from "semantic-ui-react";
 import { Icon } from "semantic-ui-react";
-import { deleteHandler } from "../../utils/functions";
+import { deleteHandler, useFetch } from "../../utils/functions";
 
 const Contacts = ({ editHandler }) => {
-  const [contactList, setContactList] = useState();
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-    const contactRef = firebase.database().ref("contact");
-    contactRef.on("value", (snapshot) => {
-      //   console.log(snapshot.val());
-      const contacts = snapshot.val();
-      // console.log({ contacts });
-      const contactArray = [];
-      for (let id in contacts) {
-        contactArray.push({ id, ...contacts[id] });
-      }
-      setContactList(contactArray);
-      setIsLoading(false);
-    });
-  }, []);
+  const { contactList, isLoading } = useFetch();
 
   return (
     <div>
