@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import Form from "./components/form/Form";
 import Contacts from "./components/table/Contacts";
 import { ToastContainer } from "react-toastify";

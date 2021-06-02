@@ -41,9 +41,10 @@ const Contacts = ({ editHandler }) => {
                 <Table.Cell textAlign="center">{item.gender}</Table.Cell>
                 <Table.Cell
                   textAlign="center"
+                  className="delete"
                   onClick={() => deleteHandler(item.id)}
                 >
-                  <Icon disabled name="delete" className="delete" />
+                  <Icon name="delete" />
                 </Table.Cell>
                 <Table.Cell
                   textAlign="center"
@@ -57,7 +58,7 @@ const Contacts = ({ editHandler }) => {
                     )
                   }
                 >
-                  <Icon disabled name="edit" />
+                  <Icon name="edit" />
                 </Table.Cell>
               </Table.Row>
             ))

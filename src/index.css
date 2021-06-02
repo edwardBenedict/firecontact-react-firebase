@@ -16,3 +16,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  background-image: url("https://picsum.photos/1600/900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.contacts {
+  flex-grow: 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.edit {
+  cursor: pointer;
+  color: green;
+}
+
+.delete {
+  cursor: pointer;
+  color: red;
+}
+
+.header {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Girassol", cursive;
+}
+
+.design {
+  font-size: 2rem;
+}
+
+.contact-header {
+  font-family: Girassol;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nothing-found {
+  color: red;
+}
