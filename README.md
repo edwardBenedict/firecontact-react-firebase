@@ -1,5 +1,7 @@
 # FireContact Project
 
+FireContact is an app about phone contacts using firebase realtime database.
+
 ## .env file content
 
 REACT_APP_API_KEY=""
