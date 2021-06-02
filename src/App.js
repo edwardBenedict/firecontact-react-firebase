@@ -20,12 +20,7 @@ function App() {
   };
 
   const editHandler = (id, username, phoneNumber, gender) => {
-    setInfo({
-      id: id,
-      username: username,
-      phoneNumber: phoneNumber,
-      gender: gender,
-    });
+    setInfo({ id, username, phoneNumber, gender });
   };
 
   return (

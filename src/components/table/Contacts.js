@@ -8,7 +8,7 @@ const Contacts = ({ editHandler }) => {
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
-      <Table size={"large"} style={{ minWidth: "500px" }}>
+      <Table size={"large"} className="table">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell textAlign="center">Username</Table.HeaderCell>

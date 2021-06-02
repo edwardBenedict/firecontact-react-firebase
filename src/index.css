@@ -75,3 +75,7 @@ code {
 .nothing-found {
   color: red;
 }
+
+.table {
+  min-width: 500px;
+}
