@@ -1,10 +1,7 @@
 import { Table } from "semantic-ui-react";
 import { Icon } from "semantic-ui-react";
-import { deleteHandler, useFetch } from "../../utils/functions";
 
-const Contacts = ({ editHandler }) => {
-  const { contactList, isLoading } = useFetch();
-
+const Contacts = ({ editHandler, isLoading, contactList, deleteHandler }) => {
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
@@ -35,7 +32,7 @@ const Contacts = ({ editHandler }) => {
             contactList?.map((item, index) => (
               <Table.Row key={index}>
                 <Table.Cell textAlign="center">
-                  {item.username.toUpperCase()}
+                  {item?.username?.toUpperCase()}
                 </Table.Cell>
                 <Table.Cell textAlign="center">{item.phoneNumber}</Table.Cell>
                 <Table.Cell textAlign="center">{item.gender}</Table.Cell>
